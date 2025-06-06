@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='Shared' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sets>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='GAME_STATE' typref='4'>
+<Attr>
+<Pos l='9' c='5' s='10'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='Ongoing' typref='5'>
+<Attr>
+<Pos l='9' c='18' s='7'/>
+</Attr>
+</Id>
+<Id value='Both_players_still_need_to_deploy' typref='5'>
+<Attr>
+<Pos l='9' c='27' s='33'/>
+</Attr>
+</Id>
+<Id value='Game_Over_Player2_won' typref='5'>
+<Attr>
+<Pos l='9' c='62' s='21'/>
+</Attr>
+</Id>
+<Id value='Game_Over_Player1_won' typref='5'>
+<Attr>
+<Pos l='9' c='85' s='21'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='PLAYERS' typref='6'>
+<Attr>
+<Pos l='10' c='5' s='7'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='Player1' typref='7'>
+<Attr>
+<Pos l='10' c='16' s='7'/>
+</Attr>
+</Id>
+<Id value='Player2' typref='7'>
+<Attr>
+<Pos l='10' c='25' s='7'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Constants>
+<Attr>
+<Pos l='12' c='1' s='18'/>
+</Attr>
+<Id value='xx' typref='2'>
+<Attr>
+<Pos l='13' c='5' s='2'/>
+</Attr>
+</Id>
+<Id value='yy' typref='2'>
+<Attr>
+<Pos l='14' c='5' s='2'/>
+</Attr>
+</Id>
+<Id value='grid_size' typref='1'>
+<Attr>
+<Pos l='15' c='5' s='9'/>
+</Attr>
+</Id>
+<Id value='grid' typref='8'>
+<Attr>
+<Pos l='16' c='5' s='4'/>
+</Attr>
+</Id>
+</Concrete_Constants>
+<Properties>
+<Attr>
+<Pos l='18' c='1' s='10'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='19' c='15' s='1'/>
+</Attr>
+<Id value='grid_size' typref='1'>
+<Attr>
+<Pos l='19' c='5' s='9'/>
+</Attr>
+</Id>
+<Integer_Literal value='10' typref='1'>
+<Attr>
+<Pos l='19' c='17' s='2'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='20' c='8' s='1'/>
+</Attr>
+<Id value='xx' typref='2'>
+<Attr>
+<Pos l='20' c='5' s='2'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='20' c='11' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='1'>
+<Attr>
+<Pos l='20' c='10' s='1'/>
+</Attr>
+</Integer_Literal>
+<Id value='grid_size' typref='1'>
+<Attr>
+<Pos l='20' c='13' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='21' c='8' s='1'/>
+</Attr>
+<Id value='yy' typref='2'>
+<Attr>
+<Pos l='21' c='5' s='2'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='2'>
+<Attr>
+<Pos l='21' c='11' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='1'>
+<Attr>
+<Pos l='21' c='10' s='1'/>
+</Attr>
+</Integer_Literal>
+<Id value='grid_size' typref='1'>
+<Attr>
+<Pos l='21' c='13' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='22' c='10' s='1'/>
+</Attr>
+<Id value='grid' typref='8'>
+<Attr>
+<Pos l='22' c='5' s='4'/>
+</Attr>
+</Id>
+<Binary_Exp op='*s' typref='8'>
+<Attr>
+<Pos l='22' c='14' s='1'/>
+</Attr>
+<Id value='xx' typref='2'>
+<Attr>
+<Pos l='22' c='12' s='2'/>
+</Attr>
+</Id>
+<Id value='yy' typref='2'>
+<Attr>
+<Pos l='22' c='15' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Unary_Exp op='POW'>
+<Id value='GAME_STATE'/>
+</Unary_Exp>
+</Type>
+<Type id='5'>
+<Id value='GAME_STATE'/>
+</Type>
+<Type id='6'>
+<Unary_Exp op='POW'>
+<Id value='PLAYERS'/>
+</Unary_Exp>
+</Type>
+<Type id='7'>
+<Id value='PLAYERS'/>
+</Type>
+<Type id='8'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

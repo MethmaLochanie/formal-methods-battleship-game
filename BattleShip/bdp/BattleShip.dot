@@ -1,0 +1,12 @@
+digraph {
+BattleShip [ label=" BattleShip " shape= box ]
+BattleShipControl [ label=" BattleShipControl " shape= box ]
+PlayerFleet [ label=" PlayerFleet " shape= box ]
+Players [ label=" Players " shape= box ]
+Shared [ label=" Shared " shape= box ]
+
+"BattleShip" -> "Shared" [style= dotted ]
+"BattleShipControl" -> "Shared" [style= dotted ]
+"PlayerFleet" -> "Shared" [style= dotted ]
+"Players" -> "Shared" [style= dotted ]
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='BattleShipControl' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sees>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='6'/>
+</Attr>
+<Name>Shared</Name>
+</Referenced_Machine>
+</Sees>
+<Abstract_Variables>
+<Attr>
+<Pos l='11' c='1' s='18'/>
+</Attr>
+<Id value='game_state' typref='4'>
+<Attr>
+<Pos l='12' c='5' s='10'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='14' c='1' s='9'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='15' c='16' s='1'/>
+</Attr>
+<Id value='game_state' typref='4'>
+<Attr>
+<Pos l='15' c='5' s='10'/>
+</Attr>
+</Id>
+<Id value='GAME_STATE' typref='5'>
+<Attr>
+<Pos l='15' c='18' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='17' c='1' s='14'/>
+</Attr>
+<Assignement_Sub>
+<Attr>
+<Pos l='18' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='game_state' typref='4'>
+<Attr>
+<Pos l='18' c='5' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='Both_players_still_need_to_deploy' typref='4'>
+<Attr>
+<Pos l='18' c='19' s='33'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Initialisation>
+<Operations>
+<Operation name='gameStatus'>
+<Attr>
+<Pos l='22' c='5' s='6' endLine='25'/>
+</Attr>
+<Output_Parameters>
+<Id value='status' typref='4'>
+<Attr>
+<Pos l='22' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='24' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='status' typref='4'>
+<Attr>
+<Pos l='24' c='9' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='game_state' typref='4'>
+<Attr>
+<Pos l='24' c='19' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='updateGameStatus'>
+<Attr>
+<Pos l='27' c='5' s='16' endLine='32'/>
+</Attr>
+<Input_Parameters>
+<Id value='new_state' typref='4'>
+<Attr>
+<Pos l='27' c='22' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='29' c='19' s='1'/>
+</Attr>
+<Id value='new_state' typref='4'>
+<Attr>
+<Pos l='29' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='GAME_STATE' typref='5'>
+<Attr>
+<Pos l='29' c='21' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='31' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='game_state' typref='4'>
+<Attr>
+<Pos l='31' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_state' typref='4'>
+<Attr>
+<Pos l='31' c='23' s='9'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Id value='GAME_STATE'/>
+</Type>
+<Type id='5'>
+<Unary_Exp op='POW'>
+<Id value='GAME_STATE'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

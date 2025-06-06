@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="I:\Coursework\BattleShip\bdp\expand_src" old_decomp_dir="I:\Coursework\BattleShip\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="I:/Coursework/BattleShip" name="BattleShip" suffix="mch" user="Methma">
+            <component name="BattleShip" type="specification" />
+        </component_file>
+        <component_file path="I:/Coursework/BattleShip" name="BattleShipControl" suffix="mch" user="Methma">
+            <component name="BattleShipControl" type="specification" />
+        </component_file>
+        <component_file path="I:/Coursework/BattleShip" name="PlayerFleet" suffix="mch" user="Methma">
+            <component name="PlayerFleet" type="specification" />
+        </component_file>
+        <component_file path="I:/Coursework/BattleShip" name="Players" suffix="mch" user="Methma">
+            <component name="Players" type="specification" />
+        </component_file>
+        <component_file path="I:/Coursework/BattleShip" name="Shared" suffix="mch" user="Methma">
+            <component name="Shared" type="specification" />
+        </component_file>
+    </project>
+</db_xml>
